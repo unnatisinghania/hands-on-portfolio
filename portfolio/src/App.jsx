@@ -344,10 +344,7 @@ const ProjectsComponent = React.forwardRef((props, ref) => {
               } gap-4 sm:gap-6`}
             >
               {project.items.map((item, idx) => (
-                <div
-                  key={idx}
-                  // className="bg-gray-50 rounded-lg overflow-hidden"
-                >
+                <div key={idx}>
                   {item.pdfSrc ? (
                     <iframe
                       src={item.pdfSrc}
@@ -358,10 +355,10 @@ const ProjectsComponent = React.forwardRef((props, ref) => {
                     <img
                       src={item.imgSrc}
                       alt={item.alt}
-                      className="w-full object-contain sm:h-56 md:h-64  rounded"
+                      className="w-full h-48 sm:h-56 md:h-64 object-cover rounded"
                     />
                   )}
-                  <p className="text-black text-xs sm:text-sm text-center">
+                  <p className="text-black text-xs sm:text-sm text-center mt-2">
                     {item.description}
                   </p>
                 </div>
