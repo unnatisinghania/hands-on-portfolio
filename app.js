@@ -1,30 +1,45 @@
 const fs = require("fs");
 const path = require("path");
 
-const DOCS_DIR = "docs";
-const IMAGE_DIR = path.join(DOCS_DIR, "images");
-
-const filesToCheck = [
-  path.join(DOCS_DIR, "index.html"),
+const buildDir = "docs";
+const imagesDir = path.join(buildDir, "images");
+const assetFiles = [
+  path.join(buildDir, "index.html"),
   ...fs
-    .readdirSync(path.join(DOCS_DIR, "assets"))
-    .map((f) => path.join(DOCS_DIR, "assets", f)),
+    .readdirSync(path.join(buildDir, "assets"))
+    .map((file) => path.join(buildDir, "assets", file)),
 ];
 
-const usedImages = new Set();
-
-filesToCheck.forEach((file) => {
-  const content = fs.readFileSync(file, "utf-8");
-  const matches = content.match(/images\/[^\s'")]+/g);
-  if (matches) matches.forEach((m) => usedImages.add(m));
-});
-
-const allImages = fs.readdirSync(IMAGE_DIR);
-
-allImages.forEach((img) => {
-  const relPath = `images/${img}`;
-  if (!usedImages.has(relPath)) {
-    fs.unlinkSync(path.join(IMAGE_DIR, img));
-    console.log(`Deleted unused image: ${relPath}`);
+function getAllFiles(dir, allFiles = []) {
+  const files = fs.readdirSync(dir);
+  for (let file of files) {
+    const fullPath = path.join(dir, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      getAllFiles(fullPath, allFiles);
+    } else {
+      allFiles.push(fullPath);
+    }
   }
+  return allFiles;
+}
+
+const imageFiles = getAllFiles(imagesDir);
+const usedFiles = new Set();
+
+assetFiles.forEach((file) => {
+  const content = fs.readFileSync(file, "utf8");
+  imageFiles.forEach((imgPath) => {
+    const relativePath = path.relative(buildDir, imgPath).replace(/\\/g, "/");
+    if (content.includes(relativePath)) {
+      usedFiles.add(imgPath);
+    }
+  });
 });
+
+const unusedFiles = imageFiles.filter((f) => !usedFiles.has(f));
+unusedFiles.forEach((f) => {
+  fs.unlinkSync(f);
+  console.log(`🗑️ Deleted unused: ${path.relative(buildDir, f)}`);
+});
+
+console.log(`✅ Cleanup complete. Removed ${unusedFiles.length} file(s).`);
