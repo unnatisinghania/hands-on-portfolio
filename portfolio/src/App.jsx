@@ -23,7 +23,7 @@ export default App;
 
 const profile = {
   name: "unnati singhania",
-  imageUrl: "/hands-on-portfolio/images/profile.jpg",
+  imageUrl: "/hands-on-portfolio/images/ppp.jpeg",
 };
 
 const navLinks = [
@@ -34,128 +34,31 @@ const navLinks = [
 
 const hero = {
   title: "unnati singhania",
-  subtitle: "junior @jpis",
+  subtitle: "8th grade @jpis",
 };
 const header = {
   title: "about me.",
-  subtitle: "Hey, I'm Akshat!",
+  subtitle: "Hey, I'm Unnati!",
   emoji: "👋🏻",
 };
 
 const description = {
-  intro: `I’m a student at JPIS, Jaipur, and I’m currently interested in developing solutions that make tech and education accessible 📚💡. I’m also a <strong>founder</strong>, empowering tens of blind students in education and employment through affordable smart glasses 🕶️.`,
-  researchInterests: `My research interests lie in improving accessible technology for disabled people ♿. I’m also super passionate about <strong>autonomous systems</strong> 🤖 and <strong>artificial intelligence in space exploration</strong> 🚀 and <strong>clean energy</strong> 🌱.`,
-  pastProjects:
-    "In the past, I’ve explored <strong>nuclear fission disruption systems</strong> ⚛️, engineered plant-based wastewater solutions for textile industries 🌱, built AI-driven CCTV security systems for low-resource environments 🛡️, and launched model rockets to 1km altitude 🚀. I’ve also worked with the <strong>Ministry of Education</strong> 🇮🇳, and worked as a junior engineer for <strong>Skillstrainer.in</strong> 💻.",
+  intro: `I’m a student at JPIS, currently focusing on leveraging technology to make an impact on the world.`,
+  researchInterests: ``,
+  pastProjects: "",
 };
 
+/*
+
+
+
+*/
 const image = {
   src: "https://placehold.co/600x800",
   alt: "Profile photo",
 };
 const header1 = "my recent projects.";
 const projects = [
-  {
-    title:
-      "SightSense: affordable ai assistive glasses for the visually impaired",
-    items: [
-      {
-        imgSrc: "/hands-on-portfolio/images/projects/sightsense.png",
-        description: "getting feedback from blind students",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/drive/t18.jpeg",
-        description: "",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/drive/t42.png",
-        description: "",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/b6.jpeg",
-        description: "winning Tie Rajasthan 2024",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/b6-1.jpeg",
-        description: "",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/hack.jpg",
-        description:
-          "invited to and awarded at a government bootcamp in Poornima university, Jaipur",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/mp2.jpeg",
-        description:
-          "meeting and discussing sightsense with member of parliament of jaipur",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/drive/t38.jpg",
-        description: "explaining my glasses to juniors",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/drive/t16.jpeg",
-        description: "",
-      },
-
-      {
-        imgSrc: "/hands-on-portfolio/images/drive/t3.jpg",
-        description: "Global Social Leaders Winner 2024",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/drive/t30.jpeg",
-        description:
-          "SightSense featured in local newspaper for Tie Rajasthan win",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/drive/t10.jpeg",
-        description: "recognized in School's Annual Day",
-      },
-
-      {
-        imgSrc: "/hands-on-portfolio/images/drive/t44.png",
-        description:
-          "discussing newly implemented features in SightSense glasses with assistant director of Innovation",
-      },
-
-      {
-        imgSrc: "/hands-on-portfolio/images/drive/t2.jpg",
-        description: "Smart India Hackathon selection, top 19 in the nation",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/3rd-graders/1.jpeg",
-        description:
-          "Session on social impact with technology with 3rd graders",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/3rd-graders/2.jpeg",
-        description: "",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/3rd-graders/3.jpeg",
-        description: "",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/udyamahotsav/1.JPG",
-        description: "Interview with Apex University, Jaipur",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/udyamahotsav/2.JPG",
-        description: "",
-      },
-      {
-        imgSrc: "/hands-on-portfolio/images/udyamahotsav/3.JPG",
-        description: "",
-      },
-      {
-        pdfSrc:
-          "https://drive.google.com/file/d/1jaGMkH78oYFgRHkYJnnGAuoAmmFAbC8s/preview",
-        description:
-          "LOR from Member of Parliament, Manju Sharma (english translation included)",
-      },
-    ],
-  },
-
   {
     title: "RiverRescue",
     items: [
@@ -167,6 +70,48 @@ const projects = [
       {
         imgSrc: "/hands-on-portfolio/images/drive/t4.jpg",
         description: "",
+      },
+    ],
+  },
+
+  {
+    title:
+      "SightSense: affordable ai assistive glasses for the visually impaired",
+    items: [
+      {
+        imgSrc: "/hands-on-portfolio/images/drive/t3.png",
+        description: "Global Social Leaders Winner 2024",
+      },
+
+      {
+        imgSrc: "/hands-on-portfolio/images/drive/t2.jpg",
+        description: "Smart India Hackathon selection, top 19 in the nation",
+      },
+      {
+        imgSrc: "/hands-on-portfolio/images/interview-1.jpeg",
+        description: "Interview with Apex University, Jaipur",
+      },
+      {
+        imgSrc: "/hands-on-portfolio/images/udyamahotsav/1.JPG",
+      },
+      {
+        imgSrc: "/hands-on-portfolio/images/udyamahotsav/2.JPG",
+        description: "",
+      },
+      {
+        imgSrc: "/hands-on-portfolio/images/udyamahotsav/3.JPG",
+        description: "",
+      },
+    ],
+  },
+
+  {
+    title: "Certificates",
+    items: [
+      {
+        pdfSrc:
+          "https://drive.google.com/file/d/1VS_qJY3XLtu3w6eH8PFSc0_8FKcNHKnQ/preview",
+        description: "Many of my certificates",
       },
     ],
   },
@@ -413,7 +358,7 @@ const ProjectsComponent = React.forwardRef((props, ref) => {
                     <img
                       src={item.imgSrc}
                       alt={item.alt}
-                      className="w-full h-48 sm:h-56 md:h-64 object-contain rounded"
+                      className="w-full object-contain sm:h-56 md:h-64  rounded"
                     />
                   )}
                   <p className="text-black text-xs sm:text-sm text-center">
@@ -439,8 +384,9 @@ const ContactSection = React.forwardRef((props, ref) => {
   const [socialLinks, setSocialLinks] = useState([]);
 
   const [contactInfo, setContactInfo] = useState([
-    { type: "General", email: "singhaniaakshat1@gmail.com" },
-    { type: "School", email: "asinghania2@jpischool.com" },
+    { type: "General", email: "usinghania1@jpisschool.com" },
+    { type: "School", email: "unnatisinghania1@gmail.com" },
+    { type: "phone", email: "+91 9832500996" },
   ]);
 
   const [footerInfo, setFooterInfo] = useState({
