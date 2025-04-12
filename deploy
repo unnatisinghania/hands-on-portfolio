@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Navigate to the portfolio directory and install dependencies, then build the project
+cd portfolio && npm i && npm run build
+
+# Move the dist directory to the root
+mv dist ../
+
+# Delete the docs directory if it exists
+rm -rf ../docs
+
+# Rename dist to docs
+mv ../dist ../docs
