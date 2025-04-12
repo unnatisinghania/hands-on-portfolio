@@ -349,13 +349,13 @@ const ProjectsComponent = React.forwardRef((props, ref) => {
                     <iframe
                       src={item.pdfSrc}
                       title={item.description}
-                      className="w-full h-48 sm:h-56 md:h-64 object-contain rounded"
+                      className="w-full h-64 sm:h-72 md:h-80 object-contain rounded"
                     />
                   ) : (
                     <img
                       src={item.imgSrc}
                       alt={item.alt}
-                      className="w-full h-48 sm:h-56 md:h-64 object-cover rounded"
+                      className="w-full h-96 sm:h-96 md:h-96 object-contain rounded"
                     />
                   )}
                   <p className="text-black text-xs sm:text-sm text-center mt-2">
